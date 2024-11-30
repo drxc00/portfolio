@@ -47,7 +47,7 @@ export default function Home(): JSX.Element {
         >
           <p className="text-center">
             <span className="font-semibold">
-              Hi, I&apos;m Neil 
+              Hi, I&apos;m Neil
             </span>
             , and I love building things with code.
             I&apos;m currently pursuing a Bachelor of Science in Computer Science, majoring in Artificial Intelligence.

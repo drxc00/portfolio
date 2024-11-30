@@ -17,7 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Neil Patrick Villanueva",
   description: "Digital Portfolio",
 };
 

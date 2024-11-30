@@ -43,69 +43,73 @@ const projects = [
         source: "https://github.com/hyde-mary/compiler",
         isSourcePublic: true
     },
-]
+];
+
 export default function Projects() {
     return (
-        <div className="mt-10 max-w-xl">
-            <div className="space-y-10">
-                {projects.map((project, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 40 }} // Start transparent and below
-                        animate={{ opacity: 1, y: 0 }} // Fade in and move to position
-                        transition={{ delay: index / (projects.length + 1), duration: 0.5 }} // Same transition for all
-                    >
-                        <Card className=" w-full shadow-none border-none">
-                            <CardContent className="mt-5 space-y-2">
-                                <div className="flex justify-between items-center">
-                                    <div className="space-y-1">
-                                        <div>
-                                            <div className="flex gap-2">
-                                                {/* <h1 className="text-xl font-semibold">{project.name}</h1> */}
-                                                <TooltipProvider>
-                                                    <Tooltip>
-                                                        <TooltipTrigger asChild className="cursor-pointer">
-                                                            <Link href={project.source} target="_blank">
-                                                                <div className="flex flex-col items-center rounded border p-2 bg-muted text-muted-foreground">
-                                                                    <Code2Icon className="w-3 h-3" />
-                                                                </div>
-                                                            </Link>
-                                                        </TooltipTrigger>
-                                                        <TooltipContent>
-                                                            {project.isSourcePublic ? (
-                                                                <div className="flex items-center gap-1">
-                                                                    <FaGithub />
-                                                                    <p>Check out the source code.</p>
-                                                                </div>
-                                                            ) : (
-                                                                <div className="flex items-center gap-1">
-                                                                    <CgUnavailable />
-                                                                    <p>Source code is private. Deployed version only.</p>
-                                                                </div>
-                                                            )}
-                                                        </TooltipContent>
-                                                    </Tooltip>
-                                                </TooltipProvider>
-                                                <TextScramble textString={project.name} />
+        <>
+            <div className="mt-10 max-w-xl">
+                <div className="space-y-10">
+                    {projects.map((project, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 40 }} // Start transparent and below
+                            animate={{ opacity: 1, y: 0 }} // Fade in and move to position
+                            transition={{ delay: index / (projects.length + 1), duration: 0.5 }} // Same transition for all
+                        >
+                            <Card className=" w-full shadow-none border-none">
+                                <CardContent className="mt-5 space-y-2">
+                                    <div className="flex justify-between items-center">
+                                        <div className="space-y-1">
+                                            <div>
+                                                <div className="flex gap-2">
+                                                    {/* <h1 className="text-xl font-semibold">{project.name}</h1> */}
+                                                    <TooltipProvider>
+                                                        <Tooltip>
+                                                            <TooltipTrigger asChild className="cursor-pointer">
+                                                                <Link href={project.source} target="_blank">
+                                                                    <div className="flex flex-col items-center rounded border p-2 bg-muted text-muted-foreground">
+                                                                        <Code2Icon className="w-3 h-3" />
+                                                                    </div>
+                                                                </Link>
+                                                            </TooltipTrigger>
+                                                            <TooltipContent>
+                                                                {project.isSourcePublic ? (
+                                                                    <div className="flex items-center gap-1">
+                                                                        <FaGithub />
+                                                                        <p>Check out the source code.</p>
+                                                                    </div>
+                                                                ) : (
+                                                                    <div className="flex items-center gap-1">
+                                                                        <CgUnavailable />
+                                                                        <p>Source code is private. Deployed version only.</p>
+                                                                    </div>
+                                                                )}
+                                                            </TooltipContent>
+                                                        </Tooltip>
+                                                    </TooltipProvider>
+                                                    <TextScramble textString={project.name} />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div>
-                                            <div className="space-x-3 text-sm text-foreground italic">
-                                                {project.technologyStack.map((stack, index) => (
-                                                    <span key={index}>{stack}</span>)
-                                                )}
+                                            <div>
+                                                <div className="space-x-3 text-sm text-foreground italic">
+                                                    {project.technologyStack.map((stack, index) => (
+                                                        <span key={index}>{stack}</span>)
+                                                    )}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <p className="text-justify">{project.description}</p>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    </motion.div>
-                ))}
+                                    <div>
+                                        <p className="text-justify">{project.description}</p>
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </>
+
     );
 }
