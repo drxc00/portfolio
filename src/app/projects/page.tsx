@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/tooltip";
 import { FaGithub } from "react-icons/fa";
 import TextScramble from "@/components/textscramble";
+import { Badge } from "@/components/ui/badge";
 
 const projects = [
     {
@@ -48,7 +49,7 @@ const projects = [
 export default function Projects() {
     return (
         <>
-            <div className="mt-10 max-w-xl">
+            <div className="mt-10 w-full md:max-w-xl">
                 <div className="space-y-10">
                     {projects.map((project, index) => (
                         <motion.div
@@ -73,7 +74,7 @@ export default function Projects() {
                                                                     </div>
                                                                 </Link>
                                                             </TooltipTrigger>
-                                                            <TooltipContent>
+                                                            <TooltipContent className="rounded">
                                                                 {project.isSourcePublic ? (
                                                                     <div className="flex items-center gap-1">
                                                                         <FaGithub />
@@ -92,9 +93,22 @@ export default function Projects() {
                                                 </div>
                                             </div>
                                             <div>
-                                                <div className="space-x-3 text-sm text-foreground italic">
+                                                <div className="mt-5 gap-2 text-sm text-foreground flex flex-wrap w-full ">
                                                     {project.technologyStack.map((stack, index) => (
-                                                        <span key={index}>{stack}</span>)
+                                                        <motion.div
+                                                        key={index}
+                                                        initial={{ opacity: 0, x:10 }} // Start transparent and below
+                                                        animate={{ opacity: 1, x: 0 }} // Fade in and move to position
+                                                        transition={{ delay: index / (project.technologyStack.length + 1), duration: 0.3 }} // Same transition for all
+                                                        >
+                                                            <Badge
+                                                                className="border-border cursor-pointer bg-muted text-muted-foreground hover:bg-muted/90"
+                                                            >
+                                                                {stack}
+                                                            </Badge>
+                                                        </motion.div>
+
+                                                    )
                                                     )}
                                                 </div>
                                             </div>

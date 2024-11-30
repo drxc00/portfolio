@@ -38,7 +38,7 @@ const ButtonShapeTabs = () => {
     )
 
     return (
-        <div className="mb-8 flex flex-wrap items-center gap-2">
+        <div className="mb-8 flex flex-wrap justify-center items-center gap-2">
             {tabs.map((tab) => (
                 <Tab
                     text={tab}

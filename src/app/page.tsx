@@ -38,7 +38,7 @@ const technicalSkills = [
 export default function Home(): JSX.Element {
   return (
     <>
-      <motion.div className="space-y-16">
+      <motion.div className="space-y-14">
         <motion.div
           className="max-w-xl space-y-2"
           initial={{ opacity: 0, y: 40 }} // Start transparent and below
@@ -61,7 +61,7 @@ export default function Home(): JSX.Element {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }} // Same transition for all
         >
-          <h3 className="text-center font-semibold">Technical Skills</h3>
+          <h3 className="text-center text-lg font-semibold">Technical Skills</h3>
           <div className="mt-3 max-w-xl gap-2 flex flex-wrap justify-center">
             {technicalSkills.map((skill, index) => (
               <Badge
@@ -79,7 +79,7 @@ export default function Home(): JSX.Element {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }} // Same transition for all
         >
-          <h3 className="text-center font-semibold">Education & Experience</h3>
+          <h3 className="text-center text-lg font-semibold">Education & Experience</h3>
           <Timeline entries={education} />
         </motion.div>
       </motion.div>

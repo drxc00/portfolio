@@ -11,7 +11,7 @@ import Link from "next/link";
 export default function Header() {
     return (
         <>
-            <div className="space-y-1 justify-items-center">
+            <div className="gap-2 justify-items-center text-center items-center">
                 <h1 className="text-xl font-bold">
                     Neil Patrick Villanueva
                 </h1>
