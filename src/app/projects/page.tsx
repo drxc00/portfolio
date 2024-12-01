@@ -37,13 +37,6 @@ const projects = [
         source: "https://github.com/drxc00/random_filipino_api",
         isSourcePublic: true
     },
-    {
-        name: "MCompiler",
-        technologyStack: ["C++", "CMake", "NASM"],
-        description: "A simple C++ compiler with support for basic arithmetic operations and variable declaration. It uses NASM for assembly language support.",
-        source: "https://github.com/hyde-mary/compiler",
-        isSourcePublic: true
-    },
 ];
 
 export default function Projects() {

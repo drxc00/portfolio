@@ -11,12 +11,12 @@ import Link from "next/link";
 export default function Header() {
     return (
         <>
-            <div className="gap-2 justify-items-center text-center items-center">
+            <div className="gap-2 justify-items-center justify-center text-center items-center">
                 <h1 className="text-xl font-bold">
                     Neil Patrick Villanueva
                 </h1>
                 <p>Software/AI Developer</p>
-                <div className="flex gap-4 mt-2">
+                <div className="flex gap-2 mt-2 items-center justify-center">
                     <Link href="https://www.linkedin.com/in/neil-patrick-villanueva/" target="_blank">
                         <IoLogoLinkedin className="w-6 h-6" />
                     </Link>
