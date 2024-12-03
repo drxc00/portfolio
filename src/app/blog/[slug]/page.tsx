@@ -7,7 +7,6 @@ import { markdownToHtml } from '@/lib/helpers';
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }>; }) {
     const { slug: blogName } = await params
     const blogHtml = await markdownToHtml(blogName);
-
     return (
         <div className="w-full max-w-lg">
             <div className="justify-items-start">
@@ -20,7 +19,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                     </div>
                 </Link>
             </div>
-            <div className="mt-5 items-center justify-items-center">
+            <div className="mt-5 items-center justify-items-center ">
                 <div dangerouslySetInnerHTML={{ __html: blogHtml }} />
             </div>
         </div>

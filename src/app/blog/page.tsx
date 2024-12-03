@@ -21,16 +21,16 @@ export default function Blog(): JSX.Element {
                         className="border p-5 rounded bg-secondary/30"
                     >
 
-                        <div className="space-y-2">
+                        <div className="space-y-1">
                             <div className="flex mx-auto justify-between">
-                                <h2 className="text-xl font-semibold ">{blog.title}</h2>
+                                <h2 className="text-2xl font-semibold ">{blog.title}</h2>
                                 <div className="flex text-sm gap-1 items-center p-1 border rounded cursor-pointer bg-muted text-muted-foreground hover:bg-muted/90">
                                     <CalendarIcon className="w-4 h-4 mr-1" />
                                     <p>{blog.datePosted}</p>
                                 </div>
                             </div>
 
-                            <p className="text-foreground/80">{blog.description}</p>
+                            <p className="text-foreground/80 text-base">{blog.description}</p>
                             <Link
                                 href={"/blog/" + blog.path}
                                 className="inline-flex items-center text-sm font-medium"
