@@ -20,8 +20,8 @@ const projects = [
         name: "MentorMatch",
         technologyStack: ["React", "Next.js", "TypeScript", "Mongoose", "MongoDB", "Next-Auth.js"],
         description: "A web application developed for the MAPUA University's Center for Student Advising (CSA) to streamline and enhance the peer mentoring process. It features user authentication and authorization, automated schedule assignments, integrated communication tools, and comprehensive management functionalities.",
-        source: "https://www.mentormatch.online/",
-        isSourcePublic: false
+        source: "https://github.com/drxc00/mentor-match-public",
+        isSourcePublic: true
     },
     {
         name: "SteamBud",
