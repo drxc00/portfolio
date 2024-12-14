@@ -2,8 +2,6 @@
 import Link from "next/link";
 import { markdownToHtml } from '@/lib/helpers';
 
-
-
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }>; }) {
     const { slug: blogName } = await params
     const blogHtml = await markdownToHtml(blogName);

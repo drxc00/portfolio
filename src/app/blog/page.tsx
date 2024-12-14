@@ -18,7 +18,7 @@ export default function Blog(): JSX.Element {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index / (blogs.length + 1), duration: 0.5 }}
                         key={index}
-                        className="border p-5 rounded bg-secondary/30"
+                        className="border p-5 rounded bg-card"
                     >
 
                         <div className="space-y-1">

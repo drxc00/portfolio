@@ -49,7 +49,7 @@ export default function Projects() {
     return (
         <>
             <div className="mt-10 w-full md:max-w-xl">
-                <div className="space-y-10">
+                <div className="space-y-6">
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
@@ -57,8 +57,8 @@ export default function Projects() {
                             animate={{ opacity: 1, y: 0 }} // Fade in and move to position
                             transition={{ delay: index / (projects.length + 1), duration: 0.5 }} // Same transition for all
                         >
-                            <Card className=" w-full shadow-none border-none">
-                                <CardContent className="mt-5 space-y-2">
+                            <Card className=" w-full flex justify-between ">
+                                <CardContent className="mt-6 space-y-2">
                                     <div className="flex justify-between items-center">
                                         <div className="space-y-1">
                                             <div>
