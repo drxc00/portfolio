@@ -11,25 +11,27 @@ import Link from "next/link";
 export default function Header() {
     return (
         <>
-            <div className="gap-2 justify-items-center justify-center text-center items-center">
-                <h1 className="text-xl font-bold">
-                    Neil Patrick Villanueva
-                </h1>
-                <p>Software/AI Developer</p>
+            <div className="w-full max-w-2xl gap-2 flex justify-between items-center border border-border rounded-md px-6 py-4">
+                <div>
+                    <h1 className=" font-medium">
+                        Neil Patrick Villanueva
+                    </h1>
+                    <p className="text-muted-foreground text-sm">Software/AI Developer</p>
+                </div>
                 <div className="flex gap-2 mt-2 items-center justify-center">
                     <Link href="https://www.linkedin.com/in/neil-patrick-villanueva/" target="_blank">
-                        <IoLogoLinkedin className="w-6 h-6" />
+                        <IoLogoLinkedin className="w-5 h-5" />
                     </Link>
                     <Link href="https://github.com/drxc00" target="_blank">
-                        <FaGithub className="w-6 h-6" />
+                        <FaGithub className="w-5 h-5" />
                     </Link>
                     <Link href="mailto:npdvillanueva@gmail.com" target="_blank">
-                        <MdAttachEmail className="w-6 h-6" />
+                        <MdAttachEmail className="w-5 h-5" />
                     </Link>
                 </div>
             </div>
-            <Separator className="my-4 max-w-3xl bg-muted/90"/>
-            <div className="">
+            {/* <Separator className="my-4 max-w-3xl" /> */}
+            <div className="mt-4">
                 <ButtonShapeTabs />
             </div>
         </>

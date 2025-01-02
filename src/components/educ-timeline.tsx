@@ -12,7 +12,7 @@ interface TimelineProps {
 
 export function Timeline({ entries }: TimelineProps) {
     return (
-        <div className="justify-items-center">
+        <div className="">
             <div className="flex flex-col gap-8 mt-5">
                 {entries.map((entry, index) => (
                     <div key={index} className="relative pl-6">

@@ -29,15 +29,15 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-100`}
       >
-        <div className="justify-items-center items-center min-h-screen p-8 sm:p-16 font-[family-name:var(--font-geist-sans)]">
+        <div className="place-items-center items-center min-h-screen p-8 sm:p-16 font-[family-name:var(--font-geist-sans)]">
           <Header />
           {children}
         </div>
         <Separator className="bg-muted/90"/>
         <footer className="text-center p-5">
-          <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Neil Patrick Villanueva</p>
+          <p className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} Neil Patrick Villanueva</p>
         </footer>
       </body>
     </html>

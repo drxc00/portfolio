@@ -24,6 +24,7 @@ const technicalSkills = [
   "Java",
   "C++",
   "JavaScript/TypeScript",
+  "AWS",
   "React",
   "Next.js",
   "Node.js",
@@ -40,12 +41,12 @@ export default function Home(): JSX.Element {
     <>
       <motion.div className="space-y-14">
         <motion.div
-          className="max-w-xl space-y-2"
+          className="max-w-2xl space-y-2"
           initial={{ opacity: 0, y: 40 }} // Start transparent and below
           animate={{ opacity: 1, y: 0 }} // Fade in and move to position
           transition={{ delay: 0.1, duration: 0.5 }} // Same transition for all
         >
-          <p className="text-center">
+          <p>
             <span className="font-semibold">
               Hi, I&apos;m Neil
             </span>
@@ -61,11 +62,11 @@ export default function Home(): JSX.Element {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }} // Same transition for all
         >
-          <h3 className="text-center text-lg font-semibold">Technical Skills</h3>
-          <div className="mt-3 max-w-xl gap-2 flex flex-wrap justify-center">
+          <h3 className="text-lg font-semibold">Technical Skills</h3>
+          <div className="mt-3 max-w-2xl gap-2 flex flex-wrap">
             {technicalSkills.map((skill, index) => (
               <Badge
-                className="bg-muted text-muted-foreground hover:bg-muted/80 cursor-pointer border-muted-foreground "
+                className="border-border cursor-pointer bg-card text-primary hover:bg-card/90"
                 key={index}
               >
                 {skill}
@@ -74,12 +75,12 @@ export default function Home(): JSX.Element {
           </div>
         </motion.div>
         <motion.div
-          className="max-w-xl mx-auto"
+          className=""
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }} // Same transition for all
         >
-          <h3 className="text-center text-lg font-semibold">Education & Experience</h3>
+          <h3 className="text-lg font-semibold">Education & Experience</h3>
           <Timeline entries={education} />
         </motion.div>
       </motion.div>

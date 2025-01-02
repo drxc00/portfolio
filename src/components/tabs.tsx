@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { usePathname, useRouter } from 'next/navigation'
 import { useState } from 'react'
 
-const tabs = ['About', 'Projects', 'Blog', 'Contact'];
+const tabs = ['About', 'Projects', 'Contact'];
 
 const Tab = ({ text, selected, setSelected }: TabProps) => {
     const router = useRouter();
@@ -38,7 +38,7 @@ const ButtonShapeTabs = () => {
     )
 
     return (
-        <div className="mb-8 flex flex-wrap justify-center items-center gap-2">
+        <div className="mb-4 flex flex-wrap items-center gap-2">
             {tabs.map((tab) => (
                 <Tab
                     text={tab}

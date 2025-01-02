@@ -8,7 +8,7 @@ import { MdAttachEmail } from "react-icons/md";
 export default function Contact() {
     return (
         <motion.div
-            className="max-w-xl text-center space-y-4"
+            className="max-w-2xl text-center space-y-4"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }} 
             transition={{ delay: 0.1, duration: 0.5 }}

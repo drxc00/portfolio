@@ -17,6 +17,16 @@ import { Badge } from "@/components/ui/badge";
 
 const projects = [
     {
+        name: "booklyai",
+        technologyStack: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Prisma", "Auth.js", "AWS Lambda", "AWS S3"],
+        description: "A web application that turn your ideas into polished ebooks in minutes using AI. "
+            + "It features user authentication and authorization, automated ebook generation, and integrated payment processing.",
+        source: "https://github.com/drxc00/booklyai",
+        isSourcePublic: true,
+        isWebApp: true,
+        webLink: "https://booklyai.net/"
+    },
+    {
         name: "MentorMatch",
         technologyStack: ["React", "Next.js", "TypeScript", "Mongoose", "MongoDB", "Next-Auth.js"],
         description: "A web application developed for the MAPUA University's Center for Student Advising (CSA) to streamline and enhance the peer mentoring process. It features user authentication and authorization, automated schedule assignments, integrated communication tools, and comprehensive management functionalities.",
@@ -48,7 +58,7 @@ const projects = [
 export default function Projects() {
     return (
         <>
-            <div className="mt-10 w-full md:max-w-xl">
+            <div className="w-full max-w-2xl">
                 <div className="space-y-6">
                     {projects.map((project, index) => (
                         <motion.div
@@ -57,7 +67,7 @@ export default function Projects() {
                             animate={{ opacity: 1, y: 0 }} // Fade in and move to position
                             transition={{ delay: index / (projects.length + 1), duration: 0.5 }} // Same transition for all
                         >
-                            <Card className=" w-full flex justify-between ">
+                            <Card className="w-full flex justify-between ">
                                 <CardContent className="mt-6 space-y-2">
                                     <div className="flex justify-between items-center">
                                         <div className="space-y-1">
