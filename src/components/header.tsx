@@ -11,7 +11,7 @@ import Link from "next/link";
 export default function Header() {
     return (
         <>
-            <div className="w-full max-w-2xl gap-2 flex justify-between items-center border border-border rounded-md px-6 py-4">
+            <div className="w-full max-w-2xl gap-2 flex justify-between items-center border border-primary rounded-md px-6 py-4">
                 <div>
                     <h1 className=" font-medium">
                         Neil Patrick Villanueva

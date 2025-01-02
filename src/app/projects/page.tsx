@@ -67,30 +67,30 @@ export default function Projects() {
                             animate={{ opacity: 1, y: 0 }} // Fade in and move to position
                             transition={{ delay: index / (projects.length + 1), duration: 0.5 }} // Same transition for all
                         >
-                            <Card className="w-full flex justify-between ">
+                            <Card className="w-full bg-zinc-100 border-primary flex justify-between ">
                                 <CardContent className="mt-6 space-y-2">
                                     <div className="flex justify-between items-center">
                                         <div className="space-y-1">
                                             <div>
-                                                <div className="flex gap-2">
+                                                <div className="flex gap-2 text-foreground">
                                                     {/* <h1 className="text-xl font-semibold">{project.name}</h1> */}
                                                     <TooltipProvider>
                                                         <Tooltip>
                                                             <TooltipTrigger asChild className="cursor-pointer">
                                                                 <Link href={project.source} target="_blank">
-                                                                    <div className="flex flex-col items-center rounded border p-2 bg-muted text-muted-foreground">
+                                                                    <div className="flex flex-col items-center rounded border border-primary p-2 bg-card text-primary">
                                                                         <Code2Icon className="w-3 h-3" />
                                                                     </div>
                                                                 </Link>
                                                             </TooltipTrigger>
                                                             <TooltipContent className="rounded">
                                                                 {project.isSourcePublic ? (
-                                                                    <div className="flex items-center gap-1">
+                                                                    <div className="flex items-center gap-1 border border-primary text-primary">
                                                                         <FaGithub />
                                                                         <p>Check out the source code.</p>
                                                                     </div>
                                                                 ) : (
-                                                                    <div className="flex items-center gap-1">
+                                                                    <div className="flex items-center gap-1 border border-primary text-primary">
                                                                         <CgUnavailable />
                                                                         <p>Source code is private. Deployed version only.</p>
                                                                     </div>
@@ -101,7 +101,7 @@ export default function Projects() {
                                                     {project.isWebApp && (
                                                         <div>
                                                             <Link href={project.webLink} target="_blank">
-                                                                <div className="flex flex-col items-center rounded border p-2 bg-muted text-muted-foreground">
+                                                                <div className="flex flex-col items-center rounded border p-2 bg-card text-primary border-primary">
                                                                     <Link2 className="w-3 h-3" />
                                                                 </div>
                                                             </Link>
@@ -120,7 +120,7 @@ export default function Projects() {
                                                             transition={{ delay: index / (project.technologyStack.length + 1), duration: 0.3 }} // Same transition for all
                                                         >
                                                             <Badge
-                                                                className="border-border cursor-pointer bg-muted text-muted-foreground hover:bg-muted/90"
+                                                                className="border-primary cursor-pointer bg-card text-foreground hover:bg-card/90"
                                                             >
                                                                 {stack}
                                                             </Badge>

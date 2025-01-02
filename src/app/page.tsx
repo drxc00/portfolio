@@ -66,7 +66,7 @@ export default function Home(): JSX.Element {
           <div className="mt-3 max-w-2xl gap-2 flex flex-wrap">
             {technicalSkills.map((skill, index) => (
               <Badge
-                className="border-border cursor-pointer bg-card text-primary hover:bg-card/90"
+                className="border-primary cursor-pointer bg-card text-primary hover:bg-card/90"
                 key={index}
               >
                 {skill}
